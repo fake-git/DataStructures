@@ -1,7 +1,8 @@
+import BinaryTree.BinaryTree;
 import LinkedList.LinkedList;
 import LinkedList.IndexOutOfLinkedListException;
 import LinkedList.Node;
-
+import BinaryTree.BinaryTreeAlreadyHasAnItemWithTheSameSortingOrderException;
 
 public class Main {
 
@@ -19,32 +20,36 @@ public class Main {
 
 
 
-    public static void main(String[] args) throws IndexOutOfLinkedListException {
+    public static void main(String[] args) throws IndexOutOfLinkedListException, BinaryTreeAlreadyHasAnItemWithTheSameSortingOrderException {
 
-//        List myList = new List();
-//
-//        myList.Add("ola1");
-//        myList.Add("ola2");
-//        myList.Add("ola3");
-//        myList.Add("ola4");
-//        myList.Add("ola5");
-//        myList.Add("ola6");
-//        myList.Add("ola7");
-//        myList.Add("ola8");
-//        myList.Add("ola9");
-//        myList.Add("ola10");
-//        myList.Add("ola11");
-//        myList.Add("ola12");
-//
-//        System.out.println(myList);
-//
-//        for (Object i :myList.data) {
-//            System.out.println(i);
-//        }
+        ///////////////////////////////////////// *** List.List *** /////////////////////////////////////////////////////////
 
-        /// ----------------------------------------------------------------- ///
+/*
+        List.List myList = new List.List();
 
+        myList.Add("ola1");
+        myList.Add("ola2");
+        myList.Add("ola3");
+        myList.Add("ola4");
+        myList.Add("ola5");
+        myList.Add("ola6");
+        myList.Add("ola7");
+        myList.Add("ola8");
+        myList.Add("ola9");
+        myList.Add("ola10");
+        myList.Add("ola11");
+        myList.Add("ola12");
 
+        System.out.println(myList);
+
+        for (Object i :myList.data) {
+            System.out.println(i);
+        }
+*/
+
+        ///////////////////////////////////////// *** Linked List.List *** //////////////////////////////////////////////////
+
+/*
         LinkedList numbers = new LinkedList();
         for(int i=0; i<10; i++)
             numbers.add(i*10);
@@ -57,6 +62,29 @@ public class Main {
         numbers.remove(50);
         System.out.println();
         print(numbers);
+*/
+
+        ///////////////////////////////////////// *** Binary Tree *** //////////////////////////////////////////////////
+
+
+        BinaryTree tree = new BinaryTree();
+        for (double d: new double[]{54, 45, 76, 65, 78, 64, 68}) {
+            tree.add(d);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     }
 
