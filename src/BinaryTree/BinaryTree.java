@@ -16,19 +16,19 @@ public class BinaryTree{
         }
 
         Node current = root;
-        int comparableResult;
+        int comparisonResult;
 
 
         while (true)
         {
 
-            comparableResult = current.Data.compareTo(item);
+            comparisonResult = current.Data.compareTo(item);
 
-            if(comparableResult == 0)
+            if(comparisonResult == 0)
                 throw new BinaryTreeAlreadyHasAnItemWithTheSameSortingOrderException();
 
             // add to right
-            if(comparableResult < 0){
+            if(comparisonResult < 0){
 
                 if(current.Right == null){
                     current.Right = new Node();
@@ -39,7 +39,7 @@ public class BinaryTree{
             }
 
             // add to left
-            if(comparableResult > 0){
+            if(comparisonResult > 0){
 
                 if(current.Left == null){
                     current.Left = new Node();
@@ -52,6 +52,40 @@ public class BinaryTree{
     }
 
 
+
+    public boolean contains(Double item){
+
+        // empty tree
+        if(root == null)
+            return false;
+
+        Node current = root;
+        int comparisonResult;
+
+        while (true)
+        {
+            comparisonResult = current.Data.compareTo(item);
+
+            if(comparisonResult == 0)
+                return true;
+
+            // Right
+            if(comparisonResult < 0)
+            {
+                if(current.Right == null)
+                    return false;
+                current = current.Right;
+            }
+
+            // Left
+            if(comparisonResult > 0)
+            {
+                if(current.Left == null)
+                    return false;
+                current = current.Left;
+            }
+        }
+    }
 
 
 

@@ -68,11 +68,11 @@ public class Main {
 
 
         BinaryTree tree = new BinaryTree();
-        for (double d: new double[]{54, 45, 76, 65, 78, 64, 68}) {
+        for (double d: new double[]{54, 45, 76, 65, 78, 64, 68})
             tree.add(d);
-        }
 
-
+        System.out.println(tree.contains(64.0));
+        System.out.println(tree.contains(15.0));
 
 
 
